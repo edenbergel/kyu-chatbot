@@ -1,5 +1,8 @@
 # 🤖 Kyū Chatbot
 
+[![Deploy with Vercel](https://vercel.com/button)](https://kyu-chatbot.vercel.app)
+🌐 **[Live Demo](https://kyu-chatbot-mcdnmh3fn-eden-bergels-projects.vercel.app)**
+
 A modern AI-powered chatbot with an animated 3D sphere interface built with Next.js, React Three Fiber, and OpenAI API.
 
 ![Kyū Chatbot](https://img.shields.io/badge/Next.js-16.0.0-black?style=for-the-badge&logo=next.js)
