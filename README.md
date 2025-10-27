@@ -67,22 +67,26 @@ A modern AI-powered chatbot with an animated 3D sphere interface built with Next
 ```
 src/
 ├── components/
-│   ├── ui/              # Reusable UI components
+│   ├── ui/                  # Reusable UI components
 │   │   ├── Button.tsx
 │   │   ├── Card.tsx
+│   │   ├── Input.tsx
 │   │   └── TextArea.tsx
-│   └── ThreeSphere.tsx  # 3D animated sphere
+│   ├── Layout.tsx           # Main layout component
+│   ├── ThreeSphere.tsx      # 3D animated sphere
+│   └── TypingMessage.tsx    # Typing animation component
 ├── hooks/
-│   ├── useChat.ts       # Chat logic and state management
-│   └── useInputValue.ts
+│   ├── useChat.ts           # Chat logic and state management
+│   └── useInputValue.ts     # Input handling hook
 ├── pages/
 │   ├── api/
-│   │   └── chat.ts      # OpenAI API integration
-│   ├── _app.tsx
-│   ├── index.tsx        # Main chat interface
-│   └── chat.tsx
+│   │   └── chat.ts          # OpenAI API integration
+│   ├── _app.tsx             # Next.js app wrapper
+│   ├── _document.tsx        # HTML document structure
+│   ├── index.tsx            # Landing page
+│   └── chat.tsx             # Main chat interface
 └── styles/
-    └── globals.css      # Global styles and Tailwind
+    └── globals.css          # Global styles and animations
 ```
 
 ## 🎮 Usage
