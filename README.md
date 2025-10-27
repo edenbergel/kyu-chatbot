@@ -1,40 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🤖 Kyū Chatbot
 
-## Getting Started
+A modern AI-powered chatbot with an animated 3D sphere interface built with Next.js, React Three Fiber, and OpenAI API.
 
-First, run the development server:
+![Kyū Chatbot](https://img.shields.io/badge/Next.js-16.0.0-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue?style=for-the-badge&logo=typescript)
+![Three.js](https://img.shields.io/badge/Three.js-Latest-orange?style=for-the-badge&logo=three.js)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- 🤖 **AI Chat Interface** - Powered by OpenAI's GPT models
+- 🎨 **Animated 3D Sphere** - Efficient rendering with React Three Fiber
+- 💾 **Persistent Storage** - User preferences saved locally
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16.0.0](https://nextjs.org/) (React 19.2.0)
+- **3D Graphics**: [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [Three.js](https://threejs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **AI**: [OpenAI API](https://openai.com/api/)
+- **Design System**: Custom UI components
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- OpenAI API key
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/edenbergel/kyu-chatbot.git
+   cd kyu-chatbot
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Add your OpenAI API key to `.env.local`:
+   ```env
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/              # Reusable UI components
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   └── TextArea.tsx
+│   └── ThreeSphere.tsx  # 3D animated sphere
+├── hooks/
+│   ├── useChat.ts       # Chat logic and state management
+│   └── useInputValue.ts
+├── pages/
+│   ├── api/
+│   │   └── chat.ts      # OpenAI API integration
+│   ├── _app.tsx
+│   ├── index.tsx        # Main chat interface
+│   └── chat.tsx
+└── styles/
+    └── globals.css      # Global styles and Tailwind
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎮 Usage
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. **Enter your name** - The chatbot will remember your name for future conversations
+2. **Start chatting** - Type your message and press Enter or click Send
+4. **Fresh experience** - Each session starts with a clean chat
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🔧 Configuration
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Customizing Chat Behavior
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit `src/hooks/useChat.ts` to modify:
+- Error messages
+- Loading behavior
+- API integration
 
-## Learn More
+## 🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Deploy to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+**Connect to Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Connect your GitHub repository
+   - Add environment variables (OPENAI_API_KEY)
+   - Deploy!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Environment Variables
 
-## Deploy on Vercel
+Make sure to add these environment variables in your deployment platform:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `OPENAI_API_KEY` - Your OpenAI API key
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+⭐ **Star this repository if you found it helpful!**
